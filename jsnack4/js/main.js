@@ -1,15 +1,14 @@
+"use strict";
 let invitatiAllaFesta = ["Emanuele", "Diego", "Alessio", "Erika", "Andrea", "Thomas"];
 
-String.prototype.toCapitalized = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
 
 let invitatoTrovato = false;
 let nomeUtente = prompt("Inserisci il tuo nome: ");
 
+
 for (let i = 0; i < invitatiAllaFesta.length; i++) {
     const invitato = invitatiAllaFesta[i];
-    if (invitato == nomeUtente.toCapitalized()) {
+    if (toCapitalized(invitato) == toCapitalized(nomeUtente)) {
         invitatoTrovato = true;
         console.log(`Benvenuto/a alla festa, ${invitato}!`);
     } else if (nomeUtente.toUpperCase() == nomeUtente) {
@@ -20,4 +19,38 @@ for (let i = 0; i < invitatiAllaFesta.length; i++) {
 
 if (invitatoTrovato == false) {
     console.log("Non siete stati invitati alla festa, mi spiace!");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toCapitalized(myString) {
+    return myString.charAt(0).toUpperCase() + myString.slice(1);
 }
